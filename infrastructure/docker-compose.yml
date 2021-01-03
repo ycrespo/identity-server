@@ -14,15 +14,3 @@ services:
       POSTGRES_PASSWORD: RobotBoy  # To be moved to environment file
     volumes:
       - ./postgres/hulk:/var/lib/postgresql/hulk
-  seq:
-      image: datalust/seq:latest
-      container_name: seq
-      restart: always
-      ports:
-        - 5341:5341
-      expose:
-        - 5341
-      environment:
-        ACCEPT_EULA: Y
-      volumes:
-        - ./seq/data:/data
